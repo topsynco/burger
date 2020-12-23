@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-bottom: 50px;
+}
+
+.background-image {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb2IHfoY0snfs1_m6ANVK_Bbp0WoKX-ZcBUA&usqp=CAU);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.searchBtn {
+  width: 100%;
+}
+
+.main-h1 {
+  background-color: rgba(0, 30, 30, 0.5);
+}
+
+.jumbotron {
+  padding: 90px;
+}

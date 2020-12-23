@@ -1,0 +1,62 @@
+<div class="jumbotron background-image text-center">
+    <div class="container">
+        <h1 class="display-4 text-white main-h1">Burger?</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row text-center bg-light">
+        <div class="card card-body">
+
+            <form id="form" class="form-inline align-items-center">
+                <div class="col-md-8">
+                    <div class="input-group md-2">
+                        <input type="text" id="inputBurger" class="form-control"
+                            placeholder="Enter the type of burger you would like to eat">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <button type="submit" id="submitBurger" class="btn btn-success submitBurger">Add Burger</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-5">
+
+        <div class="col-md-6">
+            <h3 class="text-center">ORDER UP</h3>
+            <div class="list-group">
+
+                {{#each burgers}}
+                {{#unless eaten}}
+                <a href="#" class="list-group-item list-group-item-action">
+                    {{id}}. {{burger_name}}
+                    <button data-id="{{id}}" data-eaten="{{eaten}}" class='btn btn-danger ml-3'
+                        id="eatBurger">EAT IT!</button>
+                </a>
+                {{/unless}}
+                {{/each}}
+
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <h3 class="text-center">YUMMY YUMMY </h3>
+            <div class="list-group">
+
+                {{#each burgers}}
+                {{#if eaten}}
+                <a href="#" class="list-group-item list-group-item-action disabled">
+                    {{id}}. {{burger_name}}
+                    <i class="fas fa-hamburger"></i>
+                </a>
+                {{/if}}
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
+</div>
